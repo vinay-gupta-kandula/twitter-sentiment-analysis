@@ -252,6 +252,10 @@ The Colab run completed in approximately five minutes. Its final evaluation resu
 | Recall | 90.37% |
 | F1 Score | 89.17% |
 
+### Google Colab Training Notebook
+
+[Open the Google Colab training notebook](https://colab.research.google.com/drive/1Jxvy_l9ae9EkEKlhbROrqGS67_HKWTGV?usp=sharing)
+
 After training, the model artifacts, tokenizer files, and evaluation results were downloaded from Colab and placed into:
 
 ```text
@@ -616,6 +620,22 @@ API_URL=http://api:8000
 ```
 
 These values provide configuration for the API model path and UI-to-API communication.
+
+### Streamlit Cloud Deployment
+
+When the UI is deployed separately on Streamlit Cloud, `localhost:8000` will not reach the FastAPI service. Deploy the API separately on a public hosting service, then add this Streamlit secret:
+
+```toml
+API_URL = "https://your-api-domain.example.com"
+```
+
+The API URL must be the public base URL without `/predict`. Confirm that it works before opening the UI:
+
+```text
+https://your-api-domain.example.com/health
+```
+
+The `API_URL=http://api:8000` value is only for the Docker Compose network, where the UI and API run as separate containers.
 
 ---
 

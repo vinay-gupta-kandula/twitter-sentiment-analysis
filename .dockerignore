@@ -1,0 +1,10 @@
+.venv/
+.git/
+__pycache__/
+*.pyc
+.pytest_cache/
+training_temp/
+*.zip
+data/raw/
+data/processed/
+data/unseen/predictions.csv

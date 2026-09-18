@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+training_temp/
+*.zip
+data/processed/
+data/unseen/predictions.csv

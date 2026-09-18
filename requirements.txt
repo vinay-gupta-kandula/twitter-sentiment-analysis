@@ -1,0 +1,10 @@
+torch
+transformers
+datasets
+pandas
+scikit-learn
+fastapi
+uvicorn[standard]
+streamlit
+requests
+python-dotenv
